@@ -1,0 +1,43 @@
+{
+  "schema": "teechat-golden-digests-manifest/v1",
+  "key_id": "golden-digests-v1",
+  "published_at": "2026-07-22T10:00:00.000Z",
+  "epoch": 1,
+  "not_after": "2027-07-22T00:00:00.000Z",
+  "retired_grace_period_days": 30,
+  "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
+  "roles": {
+    "openapi": {
+      "backends": {
+        "sev-snp-cvm": {
+          "active": [
+            {
+              "golden_version": "openapi-sev-snp-legacy-2026-07",
+              "vehicle": "legacy-ubuntu",
+              "launch_digest": "8e8f33b47c4d69b9fe92a9ab6489e0cef690c51192d6e89a419f3b155e1f5f35",
+              "image_digest": "53fdde898feed8b027d94baa9cfe8229867f330a1d9c49dc7d84465ee7f229f7",
+              "notes": "Transitional pin for current prod-openapi mutable Ubuntu guest (pre-Talos golden). Replace when Talos golden is promoted."
+            }
+          ],
+          "retired": []
+        }
+      }
+    },
+    "gateway": {
+      "backends": {
+        "sev-snp-cvm": {
+          "active": [],
+          "retired": []
+        }
+      }
+    },
+    "engine": {
+      "backends": {
+        "sev-snp-cvm": {
+          "active": [],
+          "retired": []
+        }
+      }
+    }
+  }
+}

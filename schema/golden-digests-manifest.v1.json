@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://teechat.ai/schemas/golden-digests-manifest.v1.json",
+  "title": "TeeChatGoldenDigestsManifest",
+  "description": "Public allowlist of Golden Image TEE digests for openapi/gateway/engine. See docs/design/golden-digests-publish.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "key_id",
+    "published_at",
+    "epoch",
+    "not_after",
+    "roles"
+  ],
+  "properties": {
+    "schema": { "const": "teechat-golden-digests-manifest/v1" },
+    "key_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Ed25519 public key id that signs the www fallback copy."
+    },
+    "published_at": { "type": "string", "format": "date-time" },
+    "epoch": { "type": "integer", "minimum": 1 },
+    "not_after": { "type": "string", "format": "date-time" },
+    "retired_grace_period_days": { "type": "integer", "minimum": 0, "default": 30 },
+    "manifest_url": { "type": "string", "format": "uri" },
+    "roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "openapi": { "$ref": "#/$defs/role" },
+        "gateway": { "$ref": "#/$defs/role" },
+        "engine": { "$ref": "#/$defs/role" }
+      }
+    }
+  },
+  "$defs": {
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backends"],
+      "properties": {
+        "backends": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/backend" },
+          "propertyNames": {
+            "enum": ["sev-snp-cvm", "tdx-cvm", "sgx-edp"]
+          }
+        }
+      }
+    },
+    "backend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["active", "retired"],
+      "properties": {
+        "active": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/goldenRelease" }
+        },
+        "retired": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/goldenRelease" }
+        }
+      }
+    },
+    "goldenRelease": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["golden_version"],
+      "properties": {
+        "golden_version": { "type": "string", "minLength": 1 },
+        "vehicle": {
+          "type": "string",
+          "enum": ["talos", "au", "nix", "coco", "legacy-ubuntu"]
+        },
+        "launch_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]+$"
+        },
+        "image_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "rootfs_verity_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "mr_enclave": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "mr_signer": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "notes": { "type": "string" },
+        "retired_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
