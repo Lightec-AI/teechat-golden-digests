@@ -71,6 +71,11 @@
       "required": ["golden_version"],
       "properties": {
         "golden_version": { "type": "string", "minLength": 1 },
+        "tls_key_policy": {
+          "type": "string",
+          "enum": ["key_ceremony", "seal_sync"],
+          "description": "OpenAPI CVM: must match baked /etc/tls_key_policy in measured rootfs."
+        },
         "vehicle": {
           "type": "string",
           "enum": ["talos", "au", "nix", "coco", "legacy-ubuntu"]

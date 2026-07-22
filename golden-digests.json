@@ -1,7 +1,7 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-07-22T10:00:00.000Z",
+  "published_at": "2026-07-22T13:27:25.000Z",
   "epoch": 1,
   "not_after": "2027-07-22T00:00:00.000Z",
   "retired_grace_period_days": 30,
@@ -13,10 +13,27 @@
           "active": [
             {
               "golden_version": "openapi-sev-snp-legacy-2026-07",
+              "tls_key_policy": "seal_sync",
               "vehicle": "legacy-ubuntu",
               "launch_digest": "8e8f33b47c4d69b9fe92a9ab6489e0cef690c51192d6e89a419f3b155e1f5f35",
               "image_digest": "53fdde898feed8b027d94baa9cfe8229867f330a1d9c49dc7d84465ee7f229f7",
-              "notes": "Transitional pin for current prod-openapi mutable Ubuntu guest (pre-Talos golden). Replace when Talos golden is promoted."
+              "notes": "Transitional mutable Ubuntu (pre-Talos). Treat as seal_sync fleet. Keep until live OpenAPI migrates to Talos seal_sync golden."
+            },
+            {
+              "golden_version": "openapi-golden-20260722-6f84bc625867-key-ceremony",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10",
+              "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
+              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic c409c8e7f70f075f…; policy in measured cmdline (disk /etc/tls_key_policy inject pending virt-customize). Ceremony guest only."
+            },
+            {
+              "golden_version": "openapi-golden-20260722-6f84bc625867-seal-sync",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1",
+              "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
+              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d…; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked — many app code_hashes can pin this golden_version."
             }
           ],
           "retired": []
