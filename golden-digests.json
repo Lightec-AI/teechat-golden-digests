@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-07-23T01:37:33.000Z",
-  "epoch": 2,
+  "published_at": "2026-07-26T08:27:28.000Z",
+  "epoch": 4,
   "not_after": "2027-07-22T00:00:00.000Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -43,7 +43,24 @@
     "gateway": {
       "backends": {
         "sev-snp-cvm": {
-          "active": [],
+          "active": [
+            {
+              "golden_version": "gateway-golden-20260726-6e59db335e43-key-ceremony",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "ad6dd11b11ce00d2f9d30c2c5868c75d6a7fd3b2be6851fe3fcfcd0dcbe61a61",
+              "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
+              "notes": "Phase-1 Talos metal OS via Image Factory schematic c409c8e7f70f075f10bc0f8fa36105cba57e88e79fbba428b089f23f4c968e6e. tls_key_policy=key_ceremony (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked \u2014 one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10."
+            },
+            {
+              "golden_version": "gateway-golden-20260726-6e59db335e43-seal-sync",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "39e038368ecbf9845e868bc905682dc39fcec20ab38277c8b36d243f5fc69fc3",
+              "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
+              "notes": "Phase-1 Talos metal OS via Image Factory schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d. tls_key_policy=seal_sync (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked \u2014 one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1."
+            }
+          ],
           "retired": []
         }
       }
