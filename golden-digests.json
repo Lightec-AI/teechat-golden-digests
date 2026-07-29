@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-07-29T02:35:30Z",
-  "epoch": 8,
+  "published_at": "2026-07-29T05:05:59Z",
+  "epoch": 9,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -15,17 +15,17 @@
               "golden_version": "openapi-golden-20260729-6f84bc625867-key-ceremony",
               "tls_key_policy": "key_ceremony",
               "vehicle": "talos",
-              "launch_digest": "8878eb9c1db604535b6118bf88d32eacbc2d6c83c27ff67e83c64975674e2e6a",
-              "image_digest": "ea0d46da9e748aeac606e001def5d48f43d131c252f87de0b988a02ec068d99e",
-              "notes": "Talos v1.13.7 + custom imager CONFIG_DM_VERITY=y; pkgs 91fe0a0; imager sha256:a1f755668e692fcac2f4116a07e0d20b30c27811838322fcd3d9f765b099789c. Ceremony. OS baseline challenge-canonical LD; hybrid composed LD in app allowlist."
+              "launch_digest": "6ba82277695fd218a6f51e76a5f833ab9de07b40d7bbf99467ed5a971f246246",
+              "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
+              "notes": "HYBRID Phase-1: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. Ceremony. OS baseline challenge-canonical LD; hybrid composed LD 1b69f72c\u2026 in app allowlist."
             },
             {
               "golden_version": "openapi-golden-20260729-6f84bc625867-seal-sync",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
-              "launch_digest": "b666eb0ec4f44678d502ab1fe4e521b24093aceaf591013c104a93a7e2b8fe03",
-              "image_digest": "f2e2163c5bfef0c9681323b58dc266a08464c1a38bbe2f2ed74a5b505af8064e",
-              "notes": "Talos v1.13.7 + custom imager CONFIG_DM_VERITY=y; pkgs 91fe0a0; imager sha256:a1f755668e692fcac2f4116a07e0d20b30c27811838322fcd3d9f765b099789c. Fleet/blue-green. OS baseline challenge-canonical LD; hybrid composed LD 523f55b4\u2026 in app allowlist for 0.7.11 app-verity R=c8a4c39a\u2026."
+              "launch_digest": "ddd60e8fcfd268d5fdb9f62d116eb8ea856e92024a1cf697ce6e81b72efa562d",
+              "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
+              "notes": "HYBRID Phase-1: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. OS baseline challenge-canonical LD; hybrid composed LD dbd0ce74\u2026 in app allowlist for 0.7.11 app-verity R=bc3f08d4\u2026."
             },
             {
               "golden_version": "openapi-sev-snp-legacy-2026-07",
@@ -50,17 +50,18 @@
               "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
               "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d\u2026; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked \u2014 many app code_hashes can pin this golden_version. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1. TEMP: launch_digest overridden to live VIP composed LD 3cb55ee2\u2026 (0.7.2 app-verity) so Phase-1 seal-sync exporters can mutual-challenge VIP; OS baseline raw was 7cc9ba47\u2026. Revert when all peers run hybrid attest."
-            },
+            }
+          ],
+          "retired": [
             {
               "golden_version": "openapi-golden-20260722-6f84bc625867-seal-sync-appverity-072",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
               "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Transitional hybrid pin: composed app-verity LD for live VIP (0.7.2 R=8e6842f8\u2026). OS baseline remains openapi-golden-20260722-6f84bc625867-seal-sync. Needed so 0.7.2 seal-sync exporter can verify VIP challenge until peers run hybrid attest."
+              "notes": "Transitional hybrid pin: composed app-verity LD for live VIP (0.7.2 R=8e6842f8\u2026). OS baseline remains openapi-golden-20260722-6f84bc625867-seal-sync. Needed so 0.7.2 seal-sync exporter can verify VIP challenge until peers run hybrid attest. RETIRED 2026-07-29: hybrid dm-verity cutover; peers attest composed app LD against OS baseline + app allowlist."
             }
-          ],
-          "retired": []
+          ]
         }
       }
     },
