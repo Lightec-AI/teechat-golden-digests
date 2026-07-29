@@ -1,9 +1,9 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-07-26T09:48:28.000Z",
-  "epoch": 5,
-  "not_after": "2027-07-22T00:00:00.000Z",
+  "published_at": "2026-07-29T02:35:30Z",
+  "epoch": 8,
+  "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
   "roles": {
@@ -11,6 +11,22 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "openapi-golden-20260729-6f84bc625867-key-ceremony",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "8878eb9c1db604535b6118bf88d32eacbc2d6c83c27ff67e83c64975674e2e6a",
+              "image_digest": "ea0d46da9e748aeac606e001def5d48f43d131c252f87de0b988a02ec068d99e",
+              "notes": "Talos v1.13.7 + custom imager CONFIG_DM_VERITY=y; pkgs 91fe0a0; imager sha256:a1f755668e692fcac2f4116a07e0d20b30c27811838322fcd3d9f765b099789c. Ceremony. OS baseline challenge-canonical LD; hybrid composed LD in app allowlist."
+            },
+            {
+              "golden_version": "openapi-golden-20260729-6f84bc625867-seal-sync",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "b666eb0ec4f44678d502ab1fe4e521b24093aceaf591013c104a93a7e2b8fe03",
+              "image_digest": "f2e2163c5bfef0c9681323b58dc266a08464c1a38bbe2f2ed74a5b505af8064e",
+              "notes": "Talos v1.13.7 + custom imager CONFIG_DM_VERITY=y; pkgs 91fe0a0; imager sha256:a1f755668e692fcac2f4116a07e0d20b30c27811838322fcd3d9f765b099789c. Fleet/blue-green. OS baseline challenge-canonical LD; hybrid composed LD 523f55b4\u2026 in app allowlist for 0.7.11 app-verity R=c8a4c39a\u2026."
+            },
             {
               "golden_version": "openapi-sev-snp-legacy-2026-07",
               "tls_key_policy": "seal_sync",
@@ -31,9 +47,17 @@
               "golden_version": "openapi-golden-20260722-6f84bc625867-seal-sync",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
-              "launch_digest": "39e038368ecbf9845e868bc905682dc39fcec20ab38277c8b36d243f5fc69fc3",
+              "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d\u2026; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked \u2014 many app code_hashes can pin this golden_version. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1."
+              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d\u2026; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked \u2014 many app code_hashes can pin this golden_version. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1. TEMP: launch_digest overridden to live VIP composed LD 3cb55ee2\u2026 (0.7.2 app-verity) so Phase-1 seal-sync exporters can mutual-challenge VIP; OS baseline raw was 7cc9ba47\u2026. Revert when all peers run hybrid attest."
+            },
+            {
+              "golden_version": "openapi-golden-20260722-6f84bc625867-seal-sync-appverity-072",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
+              "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
+              "notes": "Transitional hybrid pin: composed app-verity LD for live VIP (0.7.2 R=8e6842f8\u2026). OS baseline remains openapi-golden-20260722-6f84bc625867-seal-sync. Needed so 0.7.2 seal-sync exporter can verify VIP challenge until peers run hybrid attest."
             }
           ],
           "retired": []
