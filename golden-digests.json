@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-05T17:20:11Z",
-  "epoch": 21,
+  "published_at": "2026-08-06T06:45:00Z",
+  "epoch": 22,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -76,6 +76,16 @@
               "app_verity_root": "df5bd6a5bd9227e3b66859581ecfb64b7ff78a49f2a15712984f8e5a48ef5cb5",
               "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
               "notes": "Composed app-verity pin for OpenAPI 0.9.0 seal_sync (OS 853aefc + R=df5bd6a5)."
+            },
+            {
+              "golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync-app-0.10.0",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "857316469042522a94134478ca5971bc65e8db25e2e521872435c958327193aa",
+              "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
+              "app_verity_root": "81c6fdb5a058876943a6f360fb1afb2f153f2fadbf29540015e4a6f5fd8abb92",
+              "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
+              "notes": "Composed app-verity pin for OpenAPI 0.10.0 seal_sync (OS 853aefc + R=81c6fdb5)."
             }
           ],
           "retired": [
