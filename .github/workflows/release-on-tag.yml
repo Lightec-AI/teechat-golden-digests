@@ -6,6 +6,12 @@ on:
   push:
     tags:
       - "epoch-*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to publish as Release (e.g. epoch-28-engine-app-0.15.1-r2)"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -15,20 +21,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
         run: |
           set -euo pipefail
-          TAG="${GITHUB_REF_NAME}"
           NOTES="Public golden digests ${TAG}."
-          gh release create "$TAG" \
-            golden-digests.json \
-            golden-digests.json.sig \
-            manifest.json \
-            manifest.sig \
-            SHA256SUMS \
-            --title "$TAG" \
-            --notes "$NOTES" \
-            --latest \
-            --verify-tag
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists — uploading/clobbering assets and marking latest"
+            gh release upload "$TAG" \
+              golden-digests.json \
+              golden-digests.json.sig \
+              manifest.json \
+              manifest.sig \
+              SHA256SUMS \
+              --clobber
+            gh release edit "$TAG" --latest
+          else
+            gh release create "$TAG" \
+              golden-digests.json \
+              golden-digests.json.sig \
+              manifest.json \
+              manifest.sig \
+              SHA256SUMS \
+              --title "$TAG" \
+              --notes "$NOTES" \
+              --latest \
+              --verify-tag
+          fi
