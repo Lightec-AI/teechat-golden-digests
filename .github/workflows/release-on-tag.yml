@@ -1,0 +1,34 @@
+# Publish signed golden-digests assets as a GitHub Release when a tag is pushed.
+# Clients fetch releases/latest/download/golden-digests.json first.
+name: release-on-tag
+
+on:
+  push:
+    tags:
+      - "epoch-*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          NOTES="Public golden digests ${TAG}."
+          gh release create "$TAG" \
+            golden-digests.json \
+            golden-digests.json.sig \
+            manifest.json \
+            manifest.sig \
+            SHA256SUMS \
+            --title "$TAG" \
+            --notes "$NOTES" \
+            --latest \
+            --verify-tag
