@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-06T18:27:28.000Z",
-  "epoch": 28,
+  "published_at": "2026-08-07T15:21:02Z",
+  "epoch": 32,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -165,6 +165,63 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "gateway-app-0.23.0-key-ceremony",
+              "os_golden_version": "gateway-golden-latest-key-ceremony",
+              "app_build_version": "0.23.0-key-ceremony",
+              "code_hash": "2f693482629d457a15fd11dd48ee0ab39426de356c407734c4375e97b79b784f",
+              "app_verity_root": "62ffb9204429b48f25ea23a0018a71a205790788b850e6d6e5500503287a3226",
+              "launch_digest": "55cb928f3cec292ef6a40f1ec124eae67946c459223d7616c330cf02eabfbe83",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=62ffb9204429b48f25ea23a0018a71a205790788b850e6d6e5500503287a3226",
+                "os_golden_version": "gateway-golden-latest-key-ceremony",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "762d08dcbc81eb9732de76998ea5068f36cc2b5f613c4f866e6e0de382f905e175d4f2cfcd098b9db63fa993825fff24"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.0-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.23.0-major",
+              "code_hash": "2f693482629d457a15fd11dd48ee0ab39426de356c407734c4375e97b79b784f",
+              "app_verity_root": "7e272a5b18fa7462551bbf5e7599333acb081ee5dba1f3abc8b6fdec79285352",
+              "launch_digest": "a653b5dab46f0d57d0140aa5367965ffb65eeaefdc5c6ec867d90bfc26c28928",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=7e272a5b18fa7462551bbf5e7599333acb081ee5dba1f3abc8b6fdec79285352",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "dafbdf99c1157432761487bd43913e7f540d0692b789833dec73a9c04f6b5219754ed118f3e86c88f9e3822596ede2e8"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.0",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.23.0",
+              "code_hash": "2f693482629d457a15fd11dd48ee0ab39426de356c407734c4375e97b79b784f",
+              "app_verity_root": "97e182c9516639c5111b072b38fdc1223389ce070850a0da5fac19d8bce6b872",
+              "launch_digest": "b4ce76941a89839041d9a652809496511bcedcbe5bbfd6ee129116d8c708a049",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=97e182c9516639c5111b072b38fdc1223389ce070850a0da5fac19d8bce6b872",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "50897d45e1185ac083eefe270d870e090b02fba98838770b443dcb42f8668212778f468dadf1211a8c72b958b7085baa"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "gateway-app-0.22.2",
               "os_golden_version": "gateway-golden-latest-seal-sync",
@@ -536,6 +593,24 @@
                 "launch_digest_raw": "8b02c05f6c9f905ee03dbe2477a8d624ec6f56058fd29ecaa08deba637eceb1ad9b1042f2d84c23e6c75e0e3625e289b"
               },
               "notes": "Composed LD for hybrid engine app volume. Wave B: promote before GPU handoff; do not VIP/gateway-flip on PENDING_MEASURE."
+            },
+            {
+              "golden_version": "engine-app-0.15.1-wave2",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+              "app_build_version": "0.15.1-wave2",
+              "code_hash": "aba5484f43506a9ac88a5fe06eddc470fc66aeadd3d276a5ca174aed18aaf78e",
+              "app_verity_root": "00458f69b08ba7567049f9e79c5f06633545f0c0777da606cc9f825ac9d359f3",
+              "launch_digest": "263cce48c4fd43131d56912df84226983dd9d5501e709a65c60f2e556c2d210e",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=00458f69b08ba7567049f9e79c5f06633545f0c0777da606cc9f825ac9d359f3",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "08e47156c92eb47af6fefe2250dcecf390c70b2952750b98c17690e51713aa80c05212f74b1b9d7263e62e77db2b0406",
+                "full_cmdline": "root=UUID=b6730d0f-2634-4914-bca0-f58bb6add294 ro console=tty1 console=ttyS0 init_on_alloc=1 init_on_free=1 debugfs=off teechat.app_verity_root=00458f69b08ba7567049f9e79c5f06633545f0c0777da606cc9f825ac9d359f3"
+              },
+              "notes": "Composed LD for Wave 2 OS cmdline + existing app-verity. Offline publish only \u2014 do not live cut over until maintenance window. Candidate for tonight maintenance; not live yet."
             }
           ]
         }
