@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-17T08:51:02Z",
-  "epoch": 56,
+  "published_at": "2026-08-17T08:59:28Z",
+  "epoch": 57,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -1133,6 +1133,26 @@
                 "launch_digest_raw": "be5fd57c914c9fed9244a9c4c7200aaf652da14e28ae88c38897a79c900bf1603d8a9b0da51d1eb853d617411c56b994"
               },
               "notes": "Composed LD for hybrid engine app volume. Wave B: promote before GPU handoff; do not VIP/gateway-flip on PENDING_MEASURE."
+            },
+            {
+              "golden_version": "engine-app-0.15.4-wave3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.4-wave3",
+              "code_hash": "0544ae8955543f9d8c58ea1a5916d2d8ad8a6cb3eee1f934aaf41706b1738188",
+              "app_verity_root": "f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "9d5e1826a4dadf7d42d9dd8d0ada8fa9dd267941e54577abe3c5cd20c06824d8",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "1d016dc2500d5a8e4f3d603aadab656e52d3e8f363752fbac933c3d6fd1111f88ec5e33f002bb9084635d6b838aa90ec",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + IE 0.15.4 (bounded GPU/SNP collect). Dual-allow Wave 2 fdf40890. Remasure 2026-08-17; do not OpenAPI --require-ld until return."
             }
           ]
         }
