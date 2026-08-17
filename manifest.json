@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-07T15:21:02Z",
-  "epoch": 32,
+  "published_at": "2026-08-17T08:51:02Z",
+  "epoch": 56,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -165,6 +165,196 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "gateway-app-0.24.0-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.24.0-major",
+              "code_hash": "fb2d564eaa3655ffc5fea893f0b282365dd80030db32071ede45ff58132b973b",
+              "app_verity_root": "f5464da8efe5270d9554bb79dd898ce507661d92906ae4b8d82cbf99615c37e8",
+              "launch_digest": "c017aa2151c2bcf071f4ada640d11ea0cc60a246d3c6b91ec33bf50aa6ed3ec0",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=f5464da8efe5270d9554bb79dd898ce507661d92906ae4b8d82cbf99615c37e8",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "8779ee3507e1a8762e56c4ce866f7a6cc0bae411fa8de43ae9a4ebcf442301d4e14bb7a9821509968cf7f4661e027b45"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.24.0",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.24.0",
+              "code_hash": "fb2d564eaa3655ffc5fea893f0b282365dd80030db32071ede45ff58132b973b",
+              "app_verity_root": "16006659e2efa230462c1ecd8b0c8229b5473cdf6f03c089e32677316d657a91",
+              "launch_digest": "ca1b53b856de7b5f2411c400721b0b235ca8cdc5153308f1ffdb24b21e0d9154",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=16006659e2efa230462c1ecd8b0c8229b5473cdf6f03c089e32677316d657a91",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "2d950a469578d347fc015a158f227d183f27032bf45d39a503e54425860632844dd06698bddb5bd93894886287aada2c"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.4-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.23.4-major",
+              "code_hash": "6e5036da9f8f02fa3ef0852fb6f08690ea102a6a9de8e3799f83cd41ee1f4529",
+              "app_verity_root": "9c2a502850bad35a7576872c7be316d3505004ff39a3162e7f3110dd2a32c544",
+              "launch_digest": "516d164504881c6ce79b259b922434214dff1cfc0b9e3cb2df490d2fdeebfdac",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=9c2a502850bad35a7576872c7be316d3505004ff39a3162e7f3110dd2a32c544",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "c4e55f6c7494cf430f02219cd867fd2c4b81bffbf61f00a4f64aaf97d0c39297658f58b595c37dfe3309f5748a5769af"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.4",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.23.4",
+              "code_hash": "6e5036da9f8f02fa3ef0852fb6f08690ea102a6a9de8e3799f83cd41ee1f4529",
+              "app_verity_root": "976c5da4499ffce5eb877b1d38c691f00e9a1d3f9910baf06e1a447e17503b91",
+              "launch_digest": "ef269af8fc0e70342ad2f7b1ca095e19837c33b6bf338b3084f10a0a19441b77",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=976c5da4499ffce5eb877b1d38c691f00e9a1d3f9910baf06e1a447e17503b91",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "38a7d416955488b47d52640f41233eed1f9abf2496ae9de4633689105a9d7da41d4a121598f87dfa0155c054627351e9"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.3-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.23.3-major",
+              "code_hash": "a9fcf7149f172904f87015c23b8dd10830c4005d28386271717f83d1d0803179",
+              "app_verity_root": "2651f59e7b174d72c01609282b0176ac563bb399c7b1bb80311c3746c7026bff",
+              "launch_digest": "67eae65a0a616a5d2537ca21860e912d5c04b90fe32fca256823c7531eb5ff6a",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=2651f59e7b174d72c01609282b0176ac563bb399c7b1bb80311c3746c7026bff",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "0370607ebfca8c387014ab4f155f9a553b99d8306bc3450c4ae7102f1d720c8d2991d3f98780241b42a7eb636bd7b13b"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.3",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.23.3",
+              "code_hash": "a9fcf7149f172904f87015c23b8dd10830c4005d28386271717f83d1d0803179",
+              "app_verity_root": "783d68333efeaafafd9bbc3f52c48cb270748aa12b704f5e84bc16d490e557bc",
+              "launch_digest": "11a0a1ab4453096f42b950b6927f6ff19b0bf7b84f9c25150f3b58e2c37907e8",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=783d68333efeaafafd9bbc3f52c48cb270748aa12b704f5e84bc16d490e557bc",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "519de55463873e2b5e2d8aa6cff5f8df3ce3467d3ad31db79b5243aca0522292504dd4ce26ff8e4e974b15056eefc01b"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.2-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.23.2-major",
+              "code_hash": "0979da539295b07ff78256f09163f051faa77fd6934afbb57781c14be40d2497",
+              "app_verity_root": "7784381f2d5b1008e326a6a3ca371d7890e87441a0fe382990bb350a3d0e7129",
+              "launch_digest": "be9c89f6deca6786751674bc93afd8cea284ae0faeffe4102ac89c66473b12a2",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=7784381f2d5b1008e326a6a3ca371d7890e87441a0fe382990bb350a3d0e7129",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "f34d95c848ac9137bef9114fa6a1038cc6d39041cf4aad05c9586410af013c12a33d930488d719603f64ffb97ae37b87"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.2",
+              "os_golden_version": "gateway-golden-latest-key-ceremony",
+              "app_build_version": "0.23.2",
+              "code_hash": "0979da539295b07ff78256f09163f051faa77fd6934afbb57781c14be40d2497",
+              "app_verity_root": "3a852fb32d91896f301a00d4fb5317372f12259ccb88c8c11b3aa94bc0f44d99",
+              "launch_digest": "5b1b75d833a544023879571df939dcfe8173e3f282991cb42e93f678c665587f",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=3a852fb32d91896f301a00d4fb5317372f12259ccb88c8c11b3aa94bc0f44d99",
+                "os_golden_version": "gateway-golden-latest-key-ceremony",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "97862904e68942b1545243bff5aff875457eeb35c5f47f7d821ea326de1075fa50f922e5004c74cc12bf5a3fbcbef184"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.1-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.23.1-major",
+              "code_hash": "1ae29f0e8799e078b1b39aba5b166fbf7347c73aff29c9404265fbba4c10803d",
+              "app_verity_root": "edaf23708250bf182a644fed08aa9260fdb3f7e285cb20c67277d698beaf8814",
+              "launch_digest": "505bb600ed81296b8749f6d56c7ccc2c22898141f6560aa1a1297eb68dce6acd",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=edaf23708250bf182a644fed08aa9260fdb3f7e285cb20c67277d698beaf8814",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "fc9e721da4c7fc03244cc31d39bce7c2f8d84cfa5827f5730a3002db1f6837c8eed9112af966ba0b6049579c8cf19d03"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.23.1",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.23.1",
+              "code_hash": "1ae29f0e8799e078b1b39aba5b166fbf7347c73aff29c9404265fbba4c10803d",
+              "app_verity_root": "f77865f4fe71cee9d122a6f7109db4679436a96a388e5ba7711ca0f8b2b1ff94",
+              "launch_digest": "8ae359d2b7ba3283404cc3003439d02910fdb309f056adbc3da6427d537b0f77",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=f77865f4fe71cee9d122a6f7109db4679436a96a388e5ba7711ca0f8b2b1ff94",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "3f3e9b53f8085d7060e40b6b57dab66c711c43d595ec95f769891c215a0a9c968b5998b972facf1aca9e10b098e60571"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "gateway-app-0.23.0-key-ceremony",
               "os_golden_version": "gateway-golden-latest-key-ceremony",
@@ -498,7 +688,128 @@
     "engine": {
       "backends": {
         "sev-snp-cvm": {
-          "active": [],
+          "active": [
+            {
+              "golden_version": "engine-app-0.15.3-wave3-vllmwait",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "634d3fe9dd27864f9ef9cedaa347a2afdc977b62710eafeb9407f7ac0f0d979d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "fb7da3844567d1cb40e63325ef675fd71115146042d4fcfc9d2d246af2a99899f8e184b11a39f6dd27ecf00c54b032c0",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE ExecStartPre waits for vLLM HTTP before nvattest. Remasure 2026-08-17. Dual-allow ffi + rustie + slotenv + wave3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-waitvllm",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "0c76baf2b0d7a0f6cc24a4d42b0f6d94fb52b73dafc703ed1cd5e3b29926f8fa",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "cd89330afd41467a6337395e87504e6175b808fb5b0c49146699fb2ae9efe5cbe58caf0f7baf46948af0221ad1c2060f",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE wait-vllm.sh before nvattest. Remasure 2026-08-17. Dual-allow vllmwait + ffi + rustie + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-waitvllm2",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "2355823f3a638e16a0d06ad6d04761feb1422900d6e3e9ac4feaf38112795339",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "72003133d32ee1549db03858b7b620b2d7832a308877107be20978cff1dd86f1d5f164f34ef8ed780edd305dba0f474b",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "wait-vllm.sh as root (+), TimeoutStartSec=900, Requires app mount. Remasure 2026-08-17."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-waitvllm3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "2afe32675ce922547f64e1af566ebca835e8e643deb2d8223c162ce827af9962",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "369380bfa3cb62a95654ee737993eff4e54a100b76fe36e587e41e5b8a622a711057783923773edf6e9ec463aae6a178",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "wait-vllm.sh + TimeoutStartSec=900 + root ExecStartPre; no Requires=app.mount. Remasure 2026-08-17."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-iewrap",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "7e66933fd286f9ae25ea0eb9ab058ed5d807553aacc1af52bcbedbb8aa4a719c",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "94640fe5b4e28e2352958b8cb26e2614dd0945585d0587e53b38fe561e9ce8e450d4060c1984dda182cb5760c8410f65",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE ExecStart=/bin/sh start-ie.sh (wait vLLM then exec). No ExecStartPre. Remasure 2026-08-17. Dual-allow waitvllm3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-gputime",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "b7ceecc9cc9db69b68b69f27df035af302e3ef3bda2d089bfc9c7687081ca71d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "8ba6a395b5d17e1882b03e28d6c1877060f4e5538504c23cdbd04260fccae309bbdc19ed5b64756cd7e20a62fdc9b9a3",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE: rust-only nvidia-smi/nvattest timeout wraps, 90s stable vLLM, timeout 180 + Restart=on-failure. Remasure 2026-08-17. Dual-allow iewrap + Wave 2."
+            }
+          ],
           "retired": []
         }
       }
@@ -611,6 +922,217 @@
                 "full_cmdline": "root=UUID=b6730d0f-2634-4914-bca0-f58bb6add294 ro console=tty1 console=ttyS0 init_on_alloc=1 init_on_free=1 debugfs=off teechat.app_verity_root=00458f69b08ba7567049f9e79c5f06633545f0c0777da606cc9f825ac9d359f3"
               },
               "notes": "Composed LD for Wave 2 OS cmdline + existing app-verity. Offline publish only \u2014 do not live cut over until maintenance window. Candidate for tonight maintenance; not live yet."
+            },
+            {
+              "golden_version": "engine-app-0.15.2",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+              "app_build_version": "0.15.2",
+              "code_hash": "bf42f5819db92ba0af24ed4d56829bf3bee026b01ede92d192ccdf3fdf25407c",
+              "app_verity_root": "7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+              "launch_digest": "8c9b757220dedcaa317644344bb8761027595409aa2c23ba0f7f27c25a9899a0",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "7094294afb6bcc2da0403c7849066a315c07e5070a9a8ff36ddf49a1929f2c279ecf989242b4dc7caa525f607282407d"
+              },
+              "notes": "Composed LD for hybrid engine app volume (vLLM 0.27 relocatable). code_hash = IE binary sha256 (not tarball); client goldenCodeHashDisagreement."
+            },
+            {
+              "golden_version": "engine-app-0.15.2-wave3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.2-wave3",
+              "code_hash": "bf42f5819db92ba0af24ed4d56829bf3bee026b01ede92d192ccdf3fdf25407c",
+              "app_verity_root": "7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "265af32d1ff7e25a4220ef19d7b66158d16734c3c2d4bd17f57ef7f0589db18b",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "1e8d0af1dd65c062001a2d74c85728d1d36608bed935dbac054a78fde8c1a6282f0ea423ae922dce773687002f6fe978",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 root-verity + app-verity composed LD. Dual-allow with engine-app-0.15.2 during cutover. RB-44 2026-08-12 window."
+            },
+            {
+              "golden_version": "engine-app-0.15.2-wave3-bridge",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.2-wave3-bridge",
+              "code_hash": "bf42f5819db92ba0af24ed4d56829bf3bee026b01ede92d192ccdf3fdf25407c",
+              "app_verity_root": "7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "59c81e3bc0b1d3389fb6ef5f5566d479b2317ab5c9462f21c563cf03d4d98597",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "bb3ae91503cd2741130e797d84367c1a057142df6e751769bd2c26cf7a54697ca1f83d4c2f8f0c48e5516e45ecae1509",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=7674f8987aff2816888e6a09c54753738fac69b596b409c033304d691ba7931b init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + overlay vllm launcher/shebang bridge. Dual-allow with engine-app-0.15.2 and -wave3. RB-44 GO 2026-08-12 soft window."
+            },
+            {
+              "golden_version": "engine-app-0.15.3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+              "app_build_version": "0.15.3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "launch_digest": "fdf4089037cd5a29ccf4237430e60040a8a4420a15a327339077360becafaa93",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "66222c277d91858c807eb7b813dd72d4d80e6dfcc977db7157d5ef00f690d9524dddc22b47901b072814f3b6e416b47d"
+              },
+              "notes": "Composed LD for hybrid engine app volume. Wave B: promote before GPU handoff; do not VIP/gateway-flip on PENDING_MEASURE."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "77b86d22085b732c9729c8a0064d13988452057b6e63ce93af94c3c565710369",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "a9e1ccc29eae03ad6170d45e54ef5817f83793f9573bebba49c8edd72c82b0599bab3d585027384cc83b38c183541aa9",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + shebang-bridge + Class C uv CPython; launcher strips NI --linear-backend cutlass (Qwen NVFP4). Dual-allow Wave 2 fdf40890. Remasure 2026-08-16; do not OpenAPI --require-ld until return."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-slotenv",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "d051aeb3001c2f9a8fa3a0785d84a4e197512c066ca297d71ae2e390528df7b0",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "2e37ff2f1da7b779229eb36af05e4eb6b78b608c35f81785c1a471cae30e66a23b0c83c785982eba1a5cb710c84d3051",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 overlay binds Class C .env.prod.engine-blue (live Talos dial). Remasure 2026-08-16 after IE never reached :8788 on 77b86d22. Dual-allow wave3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-rustie",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "41c101532e6e6190e591129447d797f83227a7582ceae419e0befcc4c0356e1d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "472a93233c564676318662abc1deb15e740ff88598c87f16d1e9d20611e5c348a92c3f80cc115e0497dee181c480e2dc",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 overlay ExecStart rust IE on app-verity (NI current still 0.15.1 dangling). Remasure 2026-08-17. Dual-allow slotenv + wave3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-ffi",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "d6d67df28e349190a424f6ec386e2a6549520ea4659a399e31c4ab733c73e5a3",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "d592e0d8c9dd1800bb59075fad7401d35ec564fce4dcee10a133784b56cbc35a950362e4fd04805afcc65b471b53a7ad",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 overlay plants pinned libope_ffi.so + libattested_mtls.so on /opt/teechat-ie (exec). Remasure 2026-08-17. Dual-allow rustie + slotenv + wave3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-iewrap",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "7e66933fd286f9ae25ea0eb9ab058ed5d807553aacc1af52bcbedbb8aa4a719c",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "94640fe5b4e28e2352958b8cb26e2614dd0945585d0587e53b38fe561e9ce8e450d4060c1984dda182cb5760c8410f65",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE ExecStart=/bin/sh start-ie.sh (wait vLLM then exec). No ExecStartPre. Remasure 2026-08-17. Dual-allow waitvllm3 + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.3-wave3-gputime",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.3-wave3",
+              "code_hash": "dd0a217914b754bbf75c0419abfcdf3f697faab78ee0d0ef9231b1e73a11c46f",
+              "app_verity_root": "f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "b7ceecc9cc9db69b68b69f27df035af302e3ef3bda2d089bfc9c7687081ca71d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "8ba6a395b5d17e1882b03e28d6c1877060f4e5538504c23cdbd04260fccae309bbdc19ed5b64756cd7e20a62fdc9b9a3",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f2dfedef08d8fce364049d03f45cb5541895cc83a05784579206f69b46c0eaf3 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 rust IE: rust-only nvidia-smi/nvattest timeout wraps, 90s stable vLLM, timeout 180 + Restart=on-failure. Remasure 2026-08-17. Dual-allow iewrap + Wave 2."
+            },
+            {
+              "golden_version": "engine-app-0.15.4",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+              "app_build_version": "0.15.4",
+              "code_hash": "0544ae8955543f9d8c58ea1a5916d2d8ad8a6cb3eee1f934aaf41706b1738188",
+              "app_verity_root": "f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c",
+              "launch_digest": "e96ba2e9545ec2dd87cf4eb931f606ccc4fd55b2c4f76ff1b2d9f58779a8d052",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "be5fd57c914c9fed9244a9c4c7200aaf652da14e28ae88c38897a79c900bf1603d8a9b0da51d1eb853d617411c56b994"
+              },
+              "notes": "Composed LD for hybrid engine app volume. Wave B: promote before GPU handoff; do not VIP/gateway-flip on PENDING_MEASURE."
             }
           ]
         }
