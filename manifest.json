@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-19T16:55:00Z",
-  "epoch": 68,
+  "published_at": "2026-08-19T17:33:48Z",
+  "epoch": 69,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -125,7 +125,7 @@
               "vehicle": "talos",
               "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d\u2026; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked \u2014 many app code_hashes can pin this golden_version. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1. RETIRED 2026-07-29T10:20:39Z: superseded by 20260729 hybrid goldens; TEMP composed-LD override no longer needed."
+              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic e18781a33bdd668d…; policy in measured cmdline (disk inject pending). Fleet/blue-green; openapi binary not baked — many app code_hashes can pin this golden_version. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1. RETIRED 2026-07-29T10:20:39Z: superseded by 20260729 hybrid goldens; TEMP composed-LD override no longer needed."
             },
             {
               "golden_version": "openapi-golden-20260722-6f84bc625867-key-ceremony",
@@ -133,7 +133,7 @@
               "vehicle": "talos",
               "launch_digest": "ad6dd11b11ce00d2f9d30c2c5868c75d6a7fd3b2be6851fe3fcfcd0dcbe61a61",
               "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
-              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic c409c8e7f70f075f\u2026; policy in measured cmdline (disk /etc/tls_key_policy inject pending virt-customize). Ceremony guest only. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10. RETIRED 2026-07-29T10:20:39Z: superseded by 20260729 hybrid goldens."
+              "notes": "Talos v1.13.7 metal; factoryCommit 6f84bc625867; schematic c409c8e7f70f075f…; policy in measured cmdline (disk /etc/tls_key_policy inject pending virt-customize). Ceremony guest only. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10. RETIRED 2026-07-29T10:20:39Z: superseded by 20260729 hybrid goldens."
             },
             {
               "golden_version": "openapi-sev-snp-legacy-2026-07",
@@ -149,7 +149,7 @@
               "vehicle": "talos",
               "launch_digest": "3cb55ee2bb2567d854f83422d634b5e49c29e9e05dd02ebab44fb911bc5126d6",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Transitional hybrid pin: composed app-verity LD for live VIP (0.7.2 R=8e6842f8\u2026). OS baseline remains openapi-golden-20260722-6f84bc625867-seal-sync. Needed so 0.7.2 seal-sync exporter can verify VIP challenge until peers run hybrid attest. RETIRED 2026-07-29: hybrid dm-verity cutover; peers attest composed app LD against OS baseline + app allowlist."
+              "notes": "Transitional hybrid pin: composed app-verity LD for live VIP (0.7.2 R=8e6842f8…). OS baseline remains openapi-golden-20260722-6f84bc625867-seal-sync. Needed so 0.7.2 seal-sync exporter can verify VIP challenge until peers run hybrid attest. RETIRED 2026-07-29: hybrid dm-verity cutover; peers attest composed app LD against OS baseline + app allowlist."
             },
             {
               "golden_version": "openapi-golden-20260729-6f84bc625867-key-ceremony",
@@ -157,7 +157,7 @@
               "vehicle": "talos",
               "launch_digest": "6ba82277695fd218a6f51e76a5f833ab9de07b40d7bbf99467ed5a971f246246",
               "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
-              "notes": "HYBRID: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. Ceremony. OS baseline challenge-canonical LD; hybrid composed LD 1b69f72c\u2026 in app allowlist. tls_key_policy: cmdline teechat.tls_key_policy=key_ceremony; rootfs /etc/tls_key_policy inject=implementing (next rebake must set injected=True via virt-customize; bake fails closed without it). RETIRED 2026-07-29T23:40:51Z: superseded by initramfs-injected 853aefc goldens."
+              "notes": "HYBRID: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. Ceremony. OS baseline challenge-canonical LD; hybrid composed LD 1b69f72c… in app allowlist. tls_key_policy: cmdline teechat.tls_key_policy=key_ceremony; rootfs /etc/tls_key_policy inject=implementing (next rebake must set injected=True via virt-customize; bake fails closed without it). RETIRED 2026-07-29T23:40:51Z: superseded by initramfs-injected 853aefc goldens."
             },
             {
               "golden_version": "openapi-golden-20260729-6f84bc625867-seal-sync",
@@ -165,7 +165,7 @@
               "vehicle": "talos",
               "launch_digest": "ddd60e8fcfd268d5fdb9f62d116eb8ea856e92024a1cf697ce6e81b72efa562d",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "HYBRID: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. OS baseline challenge-canonical LD; hybrid composed LD dbd0ce74\u2026 in app allowlist for 0.7.11 app-verity R=bc3f08d4\u2026. tls_key_policy: cmdline teechat.tls_key_policy=seal_sync; rootfs /etc/tls_key_policy inject=implementing (next rebake must set injected=True; do not host-copy seals across LD change). RETIRED 2026-07-29T23:40:51Z: superseded by initramfs-injected 853aefc goldens."
+              "notes": "HYBRID: stock factory metal + custom kernel/initramfs (CONFIG_DM_VERITY=y). imager 127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d; pkgs dmverity kernel tag v1.13.7-dmverity. OS baseline challenge-canonical LD; hybrid composed LD dbd0ce74… in app allowlist for 0.7.11 app-verity R=bc3f08d4…. tls_key_policy: cmdline teechat.tls_key_policy=seal_sync; rootfs /etc/tls_key_policy inject=implementing (next rebake must set injected=True; do not host-copy seals across LD change). RETIRED 2026-07-29T23:40:51Z: superseded by initramfs-injected 853aefc goldens."
             }
           ]
         }
@@ -846,7 +846,7 @@
               "vehicle": "talos",
               "launch_digest": "ad6dd11b11ce00d2f9d30c2c5868c75d6a7fd3b2be6851fe3fcfcd0dcbe61a61",
               "image_digest": "e669e401fe4689bbb37c723d6f640a8f41380843bec40c7da5dabea5a947962f",
-              "notes": "Phase-1 Talos metal OS via Image Factory schematic c409c8e7f70f075f10bc0f8fa36105cba57e88e79fbba428b089f23f4c968e6e. tls_key_policy=key_ceremony (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked \u2014 one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10."
+              "notes": "Phase-1 Talos metal OS via Image Factory schematic c409c8e7f70f075f10bc0f8fa36105cba57e88e79fbba428b089f23f4c968e6e. tls_key_policy=key_ceremony (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked — one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=d3ef84d42de13103cdc0c74d1549f6d306fadbb5ffbf62516e535b341332d43bc85f516cdabd9d45db77b944c2261a10."
             },
             {
               "golden_version": "gateway-golden-20260726-6e59db335e43-seal-sync",
@@ -854,7 +854,7 @@
               "vehicle": "talos",
               "launch_digest": "39e038368ecbf9845e868bc905682dc39fcec20ab38277c8b36d243f5fc69fc3",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Phase-1 Talos metal OS via Image Factory schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d. tls_key_policy=seal_sync (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked \u2014 one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1."
+              "notes": "Phase-1 Talos metal OS via Image Factory schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d. tls_key_policy=seal_sync (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked — one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=7cc9ba47ce8c07642a3e45c51a8a6e6d7efa2f7a67858f843670cc7bbb90061694d12274d739f2b7bd4fe311309103b1."
             },
             {
               "golden_version": "gateway-golden-20260726-d46d22c7d871-seal-sync-major",
@@ -862,7 +862,7 @@
               "vehicle": "talos",
               "launch_digest": "b45e4e6eaeb56751043e3f37aaf42d656aef4f85c555f00aa82cb0e19257db75",
               "image_digest": "fdc5250b913498736992024fdefa6c5e5d23a98193df216671cd26ce8d371a0d",
-              "notes": "Phase-1 Talos metal OS via Image Factory schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d. tls_key_policy=seal_sync (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked \u2014 one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=6ecd319b366ef191717011ab7789740a0004273ba25dacdcf764c5ecc0a8144c5bede0f95f9858b1e238de98ea7bdc0c."
+              "notes": "Phase-1 Talos metal OS via Image Factory schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d. tls_key_policy=seal_sync (cmdline teechat.tls_key_policy=; disk /etc/tls_key_policy injected=False). gateway binary NOT baked — one seal_sync golden can pin many app code_hashes. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=6ecd319b366ef191717011ab7789740a0004273ba25dacdcf764c5ecc0a8144c5bede0f95f9858b1e238de98ea7bdc0c."
             },
             {
               "golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
@@ -907,7 +907,7 @@
                 "launch_digest_raw": "c82efa608ffc1c40781eb0d25f59b8402fe0f47a37223352dc493096106193279f1da11fc1d581ed32e63e9c7a01f414",
                 "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=ba7386bbcfce705bc18e563901f68413c433dc97e03f74f7f8e7b5a7510f1dc6 init_on_alloc=1 init_on_free=1 debugfs=off"
               },
-              "notes": "Wave 3 + IE 0.15.5. Same NI root-verity as 0.15.4 (R=ba7386bb). Dual-allow d307d767 until return to prod-engine. Remasure 2026-08-19."
+              "notes": "Wave 3 + IE 0.15.5 live on prod-engine after Wave B return. Dual-allow d307d767 for rollback."
             },
             {
               "golden_version": "engine-app-0.15.4-wave3-netplan",
@@ -1115,6 +1115,26 @@
         "sev-snp-cvm": {
           "active": [
             {
+              "golden_version": "engine-app-0.15.5-wave3-netplan",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.5-wave3",
+              "code_hash": "8d0220e4a3fb806a0f4a3c328af06ea35f7859adbcc3b0aaf615c8c9609ab96e",
+              "app_verity_root": "ba7386bbcfce705bc18e563901f68413c433dc97e03f74f7f8e7b5a7510f1dc6",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "launch_digest": "9886fb7f3d5fc4306ec584f187102beb39a524cd1ba6e55d4866195aa2e88898",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=ba7386bbcfce705bc18e563901f68413c433dc97e03f74f7f8e7b5a7510f1dc6",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "c82efa608ffc1c40781eb0d25f59b8402fe0f47a37223352dc493096106193279f1da11fc1d581ed32e63e9c7a01f414",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=ba7386bbcfce705bc18e563901f68413c433dc97e03f74f7f8e7b5a7510f1dc6 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + IE 0.15.5 live on prod-engine after Wave B return. Dual-allow d307d767 for rollback."
+            },
+            {
               "golden_version": "engine-app-0.12.0",
               "os_golden_version": "engine-ubuntu-6.8.0-124",
               "app_build_version": "0.12.0",
@@ -1215,7 +1235,7 @@
                 "launch_digest_raw": "08e47156c92eb47af6fefe2250dcecf390c70b2952750b98c17690e51713aa80c05212f74b1b9d7263e62e77db2b0406",
                 "full_cmdline": "root=UUID=b6730d0f-2634-4914-bca0-f58bb6add294 ro console=tty1 console=ttyS0 init_on_alloc=1 init_on_free=1 debugfs=off teechat.app_verity_root=00458f69b08ba7567049f9e79c5f06633545f0c0777da606cc9f825ac9d359f3"
               },
-              "notes": "Composed LD for Wave 2 OS cmdline + existing app-verity. Offline publish only \u2014 do not live cut over until maintenance window. Candidate for tonight maintenance; not live yet."
+              "notes": "Composed LD for Wave 2 OS cmdline + existing app-verity. Offline publish only — do not live cut over until maintenance window. Candidate for tonight maintenance; not live yet."
             },
             {
               "golden_version": "engine-app-0.15.2",
