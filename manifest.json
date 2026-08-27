@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-20T17:50:38Z",
-  "epoch": 76,
+  "published_at": "2026-08-27T13:35:45Z",
+  "epoch": 77,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -968,6 +968,26 @@
         "sev-snp-cvm": {
           "active": [
             {
+              "golden_version": "engine-app-0.15.6-vllm028-wave3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.6-vllm028-wave3",
+              "code_hash": "cb44e1de81328fdab39e5685e1ae3ad88e59e501e58bfef6a6804304e9a8c47a",
+              "app_verity_root": "b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+              "launch_digest": "4fbb7e6d4f8c651e3a6f4309e97c1cb96bc076d6c04d39868cb3455f74838032",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "c3d925104b27292a67e6446e830ab2ccaee31a52d9da9810299f462272d1e8752124d1f9d872ccded293f382db1f8424",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + IE 0.15.6 + vLLM 0.28.0 + max_model_len=262144. Isolated remasure; dual-allow c28d373c (0.15.6-wave3 / vLLM 0.27) for rollback.",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49"
+            },
+            {
               "golden_version": "engine-app-0.15.6-wave3-netplan",
               "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
               "app_build_version": "0.15.6-wave3",
@@ -1212,6 +1232,26 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "engine-app-0.15.6-vllm028-wave3",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.6-vllm028-wave3",
+              "code_hash": "cb44e1de81328fdab39e5685e1ae3ad88e59e501e58bfef6a6804304e9a8c47a",
+              "app_verity_root": "b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+              "launch_digest": "4fbb7e6d4f8c651e3a6f4309e97c1cb96bc076d6c04d39868cb3455f74838032",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "c3d925104b27292a67e6446e830ab2ccaee31a52d9da9810299f462272d1e8752124d1f9d872ccded293f382db1f8424",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave 3 + IE 0.15.6 + vLLM 0.28.0 + max_model_len=262144. Isolated remasure; dual-allow c28d373c (0.15.6-wave3 / vLLM 0.27) for rollback.",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49"
+            },
             {
               "golden_version": "engine-app-0.15.6-wave3-netplan",
               "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
