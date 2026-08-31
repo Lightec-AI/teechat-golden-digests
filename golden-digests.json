@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-31T05:28:55Z",
-  "epoch": 91,
+  "published_at": "2026-08-31T07:10:51Z",
+  "epoch": 92,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -298,17 +298,17 @@
               "os_golden_version": "gateway-golden-20260831-d46d22c7d871-key-ceremony",
               "app_build_version": "0.25.4-key-ceremony",
               "code_hash": "4cf051016b8d33c0f9c1bdf077d46c40839a57d77029ec3282f9cb721f85f755",
-              "app_verity_root": "b10cf3741572bea0c396b6abb33f275a313a64cd365444dcf3fd85ec3fb5cdf4",
-              "launch_digest": "75e1ed31b67e06e254fd2808a39f1233a71a88e3fef139daef399da078b743c5",
+              "app_verity_root": "4f27fd341302467c0b125d2858897e322d99fcdfe175a30e2a9a15096847e4d5",
+              "launch_digest": "c1e14404d73655734eb85434a2e84f19ea12e9c91490049f97e009fbd441cc11",
               "tls_key_policy": "key_ceremony",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=b10cf3741572bea0c396b6abb33f275a313a64cd365444dcf3fd85ec3fb5cdf4",
+                "cmdline_contains": "teechat.app_verity_root=4f27fd341302467c0b125d2858897e322d99fcdfe175a30e2a9a15096847e4d5",
                 "os_golden_version": "gateway-golden-20260831-d46d22c7d871-key-ceremony",
                 "vcpus": 2,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "95c8c5b050e8cf4ddcaf84df8f97860e60f0707f31adbadf3bd9a8344e6272bdd3a4455b0c0e959eb20b29a1425c379f"
+                "launch_digest_raw": "b05d0c980ffa157a1f89b69b28d43045c4b5a2e204f2773ebace524ecb07f12e7ef0787dc5c7af321364cfe36b0365eb"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
