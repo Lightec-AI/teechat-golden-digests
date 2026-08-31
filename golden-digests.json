@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-31T02:28:38Z",
-  "epoch": 87,
+  "published_at": "2026-08-31T03:28:45Z",
+  "epoch": 89,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -295,20 +295,20 @@
           "active": [
             {
               "golden_version": "gateway-app-0.25.3-key-ceremony",
-              "os_golden_version": "gateway-golden-latest-key-ceremony",
+              "os_golden_version": "gateway-golden-20260831-d46d22c7d871-key-ceremony",
               "app_build_version": "0.25.3-key-ceremony",
               "code_hash": "f9adc31702c17776946ca291f6d9ba5fbb8a9ac37f1bf1159774f5074648d23d",
-              "app_verity_root": "09603e87eb9d8151b02ddf3036e818c408c629e98b635711358ba6ab6ba029e0",
-              "launch_digest": "b296a1218af22bcfa2bd9425fe1f394c804a0cb8f6e6349c19a3fb59ea45e703",
+              "app_verity_root": "50c7dc79f66955ea48833aacdd70975eb5fba52d9c548906e82a21783573590f",
+              "launch_digest": "4d72ba8391b0e40e0d96e85d34a4670b86f98c55ee21184e48d8fe67ea32cfd0",
               "tls_key_policy": "key_ceremony",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=09603e87eb9d8151b02ddf3036e818c408c629e98b635711358ba6ab6ba029e0",
-                "os_golden_version": "gateway-golden-latest-key-ceremony",
+                "cmdline_contains": "teechat.app_verity_root=50c7dc79f66955ea48833aacdd70975eb5fba52d9c548906e82a21783573590f",
+                "os_golden_version": "gateway-golden-20260831-d46d22c7d871-key-ceremony",
                 "vcpus": 2,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "5eb4670f15476bf732e488839a82c002066491109929cc91f707606ba94e230fb6009cadbbceb8fd49d0ad64e44ac702"
+                "launch_digest_raw": "e6d01997f6b6c054fbc4cf4f111158c73eb688111363592949409e9c51469173b637c2817aef2125370b830560e5169d"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
@@ -1206,6 +1206,14 @@
               "launch_digest": "ad1181b1e9e883d574c7173ab614375ff9ee3dac4cf96dca0c0b6563582e5c11",
               "image_digest": "c65ef54a90097244c9e9a4292666fb5ef6a7ad73f4d393dc641dba2da97e430a",
               "notes": "HYBRID Phase-1: stock factory metal rootfs (schematic e18781a33bdd668d51997256aeb94169d8f36cec2b0173639f399815ab66865d) + custom kernel/initramfs from 127.0.0.1:5005/lightec-ai/imager:v1.13.7-dmverity (127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d). tls_key_policy=seal_sync (cmdline; disk injected=True). CONFIG_DM_VERITY=y kernel. gateway binary NOT baked. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=1628f1d7bc9293859b4061e6ef67be3ffc81c4506a096db4d3233002be98a6fc272ce17f68db2a3be1aba028a730fe7a."
+            },
+            {
+              "golden_version": "gateway-golden-20260831-d46d22c7d871-key-ceremony",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "75411ebc4427926cf3940d4f43d8bef2db21dff5a5e97bec7fa45f844b1ecd20",
+              "image_digest": "49cd8aaf658a79654ef896289ed6c9ebf48ddfbb5337fad600c1899e3e20506d",
+              "notes": "HYBRID Phase-1: stock factory metal rootfs (schematic c409c8e7f70f075f10bc0f8fa36105cba57e88e79fbba428b089f23f4c968e6e) + custom kernel/initramfs from 127.0.0.1:5005/lightec-ai/imager:v1.13.7-dmverity (127.0.0.1:5005/lightec-ai/imager@sha256:daba87d3fe006f5ed0ccac3ad51a57780e6d6cac57131ccd0117bf1348d9e77d). tls_key_policy=key_ceremony (cmdline; disk injected=True). CONFIG_DM_VERITY=y kernel. gateway binary NOT baked. challenge-canonical launch_digest=sha256(utf8(hex(MEASUREMENT))); raw MEASUREMENT=9d7ed68ec99dcbf7d3fbbee6de4e83688d4a3b01793708a9b55cf5b768dd90cc24b0a3157c6cc8a53301db52ad597f90."
             }
           ],
           "retired": []
