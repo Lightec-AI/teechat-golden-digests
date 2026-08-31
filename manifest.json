@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-08-27T14:11:34Z",
-  "epoch": 78,
+  "published_at": "2026-08-31T00:35:03Z",
+  "epoch": 85,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -11,6 +11,82 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony-app-0.12.5",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "7f17cccabaeee67caeb88683aa0bd8f380b1b1d1139e7bd7bd2865a52dfd35e6",
+              "app_verity_root": "996091e63de4da5857656fe880d8312e52cd1219ecc4034b6eb26912f17422e4",
+              "os_golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony",
+              "app_build_version": "0.12.5",
+              "code_hash": "ab94656e786c0475867b6850b9840fda53d52dd6d62375d451b8eb5353349e29",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=996091e63de4da5857656fe880d8312e52cd1219ecc4034b6eb26912f17422e4",
+                "os_golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_raw": "65a441b14056c10d36febf5ec9c6704bce0d6fe647e988a21f00bfe921c5e0da0ca2c1878a00b4f7ea7abb6210d8af9c",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))"
+              },
+              "notes": "Composed LD for hybrid app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync-app-0.12.5",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "67f93877aaf63f2345b5cc11c535ce22a9f9a2a5c551968a5c1bed2829f100db",
+              "app_verity_root": "996091e63de4da5857656fe880d8312e52cd1219ecc4034b6eb26912f17422e4",
+              "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
+              "app_build_version": "0.12.5",
+              "code_hash": "ab94656e786c0475867b6850b9840fda53d52dd6d62375d451b8eb5353349e29",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=996091e63de4da5857656fe880d8312e52cd1219ecc4034b6eb26912f17422e4",
+                "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "365b83af4fa8b38b5775facf8c569ee30136d7db02d0eebdb9ba0e5aca40e546a32839b62f94f0b8d847fd47a6f7113e"
+              },
+              "notes": "Composed LD for hybrid app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony-app-0.12.3",
+              "tls_key_policy": "key_ceremony",
+              "vehicle": "talos",
+              "launch_digest": "c53a2659d7c87d5e9c0c38f9a91bb31ae2ffffd19c6616b7fc40081b23e3ffd4",
+              "app_verity_root": "9f5cf1a2c970bdcb6e8a42b91048b37206bad806944d0debcd668f5674ef7fbb",
+              "os_golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony",
+              "app_build_version": "0.12.3",
+              "code_hash": "27923ecf5c2572f55f268db55f5ba0674647b81220e4010c757e62f6bf22f22d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=9f5cf1a2c970bdcb6e8a42b91048b37206bad806944d0debcd668f5674ef7fbb",
+                "os_golden_version": "openapi-golden-20260729-853aefc5f849-key-ceremony",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_raw": "7395731d5099169a217a1243f71eeac855fad589a5661b37f8a45c819e1f4da4c505b9d5989f8f016c9e0d8bfa508847",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))"
+              },
+              "notes": "Composed LD for hybrid app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync-app-0.12.3",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "launch_digest": "06d004b042892104d6d332c2f5aa630ef08f2f3bede63e70b63e9bfb2fbff355",
+              "app_verity_root": "9f5cf1a2c970bdcb6e8a42b91048b37206bad806944d0debcd668f5674ef7fbb",
+              "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
+              "app_build_version": "0.12.3",
+              "code_hash": "27923ecf5c2572f55f268db55f5ba0674647b81220e4010c757e62f6bf22f22d",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=9f5cf1a2c970bdcb6e8a42b91048b37206bad806944d0debcd668f5674ef7fbb",
+                "os_golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "c7b73ee27ba1ee49035402dd16bce8573be1165d05ff7a5fe05f6db922d4ee121012f9c09f5cf9a3e08ecd057c5ab0c5"
+              },
+              "notes": "Composed LD for hybrid app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "openapi-golden-20260729-853aefc5f849-seal-sync-app-0.7.11",
               "tls_key_policy": "seal_sync",
@@ -215,6 +291,82 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "gateway-app-0.25.2-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.25.2-major",
+              "code_hash": "26f0b6c1a5de30505883937cfc04e751d2b010878b9ab2cdb9a9a92754843da9",
+              "app_verity_root": "78df1104edbb891df3c357946eece5303d8e9822bbdea280e1c4d72494de7db9",
+              "launch_digest": "51850432419d20ea6fe190550328df0c19593ae2d75aa61addc4eadd8c52aa98",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=78df1104edbb891df3c357946eece5303d8e9822bbdea280e1c4d72494de7db9",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "4e3ade400ee94d516e38dc76a1411c5deb28387a349ac3887fdd7fa06bc9274c58e4dbbe600a3bac55a05a30fa1bdbd7"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.25.2",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.25.2",
+              "code_hash": "26f0b6c1a5de30505883937cfc04e751d2b010878b9ab2cdb9a9a92754843da9",
+              "app_verity_root": "70a26821f4da3267a80f270ff9a524d42ed64e8fbd4187680ff4247ccf0a73b7",
+              "launch_digest": "ffa9ffa800393e24688bb35d57974456a44fd7a59ea11f6be69ae9050bd74221",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=70a26821f4da3267a80f270ff9a524d42ed64e8fbd4187680ff4247ccf0a73b7",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "f62839feb7516a5a3ebe83ebbf19482ded207f7320fff7c8df67437300462688bb12324415f38f734b75c1fca3bc7893"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.25.1-major",
+              "os_golden_version": "gateway-golden-latest-seal-sync-major",
+              "app_build_version": "0.25.1-major",
+              "code_hash": "d6524707a0a4693a67091e470543597e84637abda929f3005aa1cdb1b78178d7",
+              "app_verity_root": "a57d39d908c72df8b3844b3b78762de25415b9be67ac421d9804a5a660b8d777",
+              "launch_digest": "55bdd75f0f105f2e458de80ee0513c63e934a3acee881cb573f73c5966c9dbb7",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=a57d39d908c72df8b3844b3b78762de25415b9be67ac421d9804a5a660b8d777",
+                "os_golden_version": "gateway-golden-latest-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "771b40b5758a47e576394d8ede3a16609cf59e29919a4507cfbb2d89f2c23c66842ffc2fa7733286a6e9f1c5e247311c"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.25.1",
+              "os_golden_version": "gateway-golden-latest-seal-sync",
+              "app_build_version": "0.25.1",
+              "code_hash": "d6524707a0a4693a67091e470543597e84637abda929f3005aa1cdb1b78178d7",
+              "app_verity_root": "e364b123b8b8b39b7631550db9e1eadbb8b378ff0fd988061c22f52198e12b61",
+              "launch_digest": "703c78d4f9b7cd0e74f65c58eae68100c2d762707acb40de0399afb461c32da2",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=e364b123b8b8b39b7631550db9e1eadbb8b378ff0fd988061c22f52198e12b61",
+                "os_golden_version": "gateway-golden-latest-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "36e37b4398d7809913adde8822c3e4685032f05d38711d1a2e24030ab3421ea19789d4152c1c63bb0b5c84ecaabcddaf"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "gateway-app-0.25.0-major",
               "os_golden_version": "gateway-golden-latest-seal-sync-major",
@@ -1006,6 +1158,26 @@
         "sev-snp-cvm": {
           "active": [
             {
+              "golden_version": "engine-app-0.15.6-vllm028-luks0828",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.6-vllm028-luks0828",
+              "code_hash": "cb44e1de81328fdab39e5685e1ae3ad88e59e501e58bfef6a6804304e9a8c47a",
+              "app_verity_root": "b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+              "launch_digest": "a42c5fb82af7dabba15594d586071bdc65014038e2093b2f3fa523d15fc4ba64",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "05dd8253720b9395b07f94ede62a13e81038150c0dabd1eaab96f4f14b6fc808fbf0f602e3e52e410dae8bf1e4ed1df1",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave B 2026-08-29 return: IE 0.15.6 + vLLM 0.28.0 / 256K + ephemeral LUKS /mnt/kv_cache + --kv-offload. Overlap \u2014 do not evict engine-app-0.15.6-vllm028-wave3 (4fbb7e6d).",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49"
+            },
+            {
               "golden_version": "engine-app-0.15.6-vllm028-wave3",
               "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
               "app_build_version": "0.15.6-vllm028-wave3",
@@ -1270,6 +1442,26 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "engine-app-0.15.6-vllm028-luks0828",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.15.6-vllm028-luks0828",
+              "code_hash": "cb44e1de81328fdab39e5685e1ae3ad88e59e501e58bfef6a6804304e9a8c47a",
+              "app_verity_root": "b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+              "launch_digest": "a42c5fb82af7dabba15594d586071bdc65014038e2093b2f3fa523d15fc4ba64",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "05dd8253720b9395b07f94ede62a13e81038150c0dabd1eaab96f4f14b6fc808fbf0f602e3e52e410dae8bf1e4ed1df1",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=b8125601ac84373d0844c7722c1a9e4b6ad12f5731c25b887092c55b75e62a99 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave B 2026-08-29 return: IE 0.15.6 + vLLM 0.28.0 / 256K + ephemeral LUKS /mnt/kv_cache + --kv-offload. Overlap \u2014 do not evict engine-app-0.15.6-vllm028-wave3 (4fbb7e6d).",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49"
+            },
             {
               "golden_version": "engine-app-0.15.6-vllm028-wave3",
               "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
