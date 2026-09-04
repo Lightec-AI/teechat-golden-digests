@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-09-03T11:13:55Z",
-  "epoch": 108,
+  "published_at": "2026-09-04T01:57:48Z",
+  "epoch": 112,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -1554,6 +1554,25 @@
         "sev-snp-cvm": {
           "active": [
             {
+              "golden_version": "engine-app-0.16.1-vllm028-luks0828",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.16.1-vllm028-luks0828",
+              "code_hash": "5a260e108fcc2950e28c3a8a342ba82d824bbcf87dffb7716fc083ab7e97f818",
+              "app_verity_root": "32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09",
+              "launch_digest": "2f0aac8629a874873e5afd36d20363b6b51c7cc1b7608fe45954dc5e076db78f",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "37bfb91881d8e71e23c0d8814680bf9018f4a378bd06e59595a2dfd0ee041c435ac478da7469ff48ca118f9a26c409c1",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "IE 0.16.1 tools/tool_choice forward; Wave B luks0828 remasure"
+            },
+            {
               "golden_version": "engine-app-0.16.0-vllm028-luks0828",
               "app_build_version": "0.16.0-vllm028-luks0828",
               "launch_digest": "7d6f3792c0ee13057986b4a2fed3acff5b54efc57f106026a8080f84e9de54d0",
@@ -1879,6 +1898,26 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "engine-app-0.16.0-vllm028-luks0828",
+              "app_build_version": "0.16.0-vllm028-luks0828",
+              "launch_digest": "7d6f3792c0ee13057986b4a2fed3acff5b54efc57f106026a8080f84e9de54d0",
+              "app_verity_root": "cc06ce8dacccba8021dfce5000dd59b97f5e5e63e1c7aac1922be52672dd2f53",
+              "code_hash": "daaa2a9899c4a922d729a792742c19b657661902d3cc871f4f0c4dcbe89d3c20",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "root_verity_root": "84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=cc06ce8dacccba8021dfce5000dd59b97f5e5e63e1c7aac1922be52672dd2f53",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "e859ae3619a12b0e022e07470ec5a3b05d3665eb0afba254af141f79cdaffe9c69e92f1b0efc49cc3f67e3c2c7ebc1e2",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=cc06ce8dacccba8021dfce5000dd59b97f5e5e63e1c7aac1922be52672dd2f53 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Wave B 2026-09-03: IE 0.16.0 remasured on live luks0828 initrd (2a071ccf\u2026). Replaces wrong app-0.15.5 bake LD bd8aff5c\u2026"
+            },
             {
               "golden_version": "engine-app-0.15.7-vllm028-luks0828",
               "app_build_version": "0.15.7-vllm028-luks0828",
@@ -2372,6 +2411,25 @@
                 "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=f20093c84ef8f4773a7a3cc7e8847907125f78b5b40e6ce5247a7a75ffe42e4c init_on_alloc=1 init_on_free=1 debugfs=off"
               },
               "notes": "Wave 3 + 0.15.4. Overlay rewrites netplan from live virtio MACs (static 192.168.100.130). Dual-allow fdf40890. Remasure 2026-08-17 21:05 CST. Do not boot 7d738dea/2dad6002/9d5e1826 as user path."
+            },
+            {
+              "golden_version": "engine-app-0.16.1-vllm028-luks0828",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.16.1-vllm028-luks0828",
+              "code_hash": "5a260e108fcc2950e28c3a8a342ba82d824bbcf87dffb7716fc083ab7e97f818",
+              "app_verity_root": "32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09",
+              "launch_digest": "2f0aac8629a874873e5afd36d20363b6b51c7cc1b7608fe45954dc5e076db78f",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "37bfb91881d8e71e23c0d8814680bf9018f4a378bd06e59595a2dfd0ee041c435ac478da7469ff48ca118f9a26c409c1",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=32f41a06514b87e79b48449a8b598dd6185d297efef8cb513c5c2e61549caa09 init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Isolated Wave 3 remasure for a new app-verity root. Did not write OS golden cmdline, root-verity.json, or live 0.15.6 attach. Do not Wave B --force-live until explicit GO."
             }
           ]
         }
