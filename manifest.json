@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-09-04T14:28:04Z",
-  "epoch": 114,
+  "published_at": "2026-09-05T10:25:13Z",
+  "epoch": 115,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -413,6 +413,44 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "gateway-app-0.25.10-major",
+              "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
+              "app_build_version": "0.25.10-major",
+              "code_hash": "a9fb16572df206f4831dcfbed392411f884ff51fb99f9bf1ffe82f99ee2c4160",
+              "app_verity_root": "adeb068fd09be70bedcd2fd4e84679ade897bae608215af2d2c840881009702c",
+              "launch_digest": "5269b2ce46ee23040210f52e02307cbd6fe2446c49146ca217a46c66281bd589",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=adeb068fd09be70bedcd2fd4e84679ade897bae608215af2d2c840881009702c",
+                "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "2791b288865c30ad51106b6c4746c498b93837ef55759e65866e337ee8fc78e14d2ff192568a1a6e5aa47fc8b2bcc782"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.25.10",
+              "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
+              "app_build_version": "0.25.10",
+              "code_hash": "a9fb16572df206f4831dcfbed392411f884ff51fb99f9bf1ffe82f99ee2c4160",
+              "app_verity_root": "bfdd9fb0b12280cd7a877b0502628fa93d2ad3f249c00bc7bb1192a0d6c666e4",
+              "launch_digest": "c70388541fe58794b89bbd64aa2aac5e7b45d22c4a9db6473ca88c4c76a32e11",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=bfdd9fb0b12280cd7a877b0502628fa93d2ad3f249c00bc7bb1192a0d6c666e4",
+                "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "24551a20b1477a8f9c58f960819e0a2b7391f93c36b873d76a73364f6bf1a66e2442051f385518df461ffd071950270a"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "gateway-app-0.25.9-major",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
