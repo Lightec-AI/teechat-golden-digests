@@ -1,7 +1,7 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-09-14T09:14:36Z",
+  "published_at": "2026-09-18T11:27:23Z",
   "epoch": 124,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
@@ -494,40 +494,40 @@
         "sev-snp-cvm": {
           "active": [
             {
-              "golden_version": "gateway-app-0.28.0-major",
+              "golden_version": "gateway-app-0.28.1-major",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
-              "app_build_version": "0.28.0-major",
-              "code_hash": "906218a3487574cd5cfdfd67857328b781f3c0d49c2c5b7addef1717cbab0365",
-              "app_verity_root": "03886f2cdd4a4af0b12f4b41a23fe0106422f960d0be4fd20345a5fd384f86c4",
-              "launch_digest": "5b64f1ac20480440d219547213c61cbd2eef896b4d5595f8c7f70ed0f65f924c",
+              "app_build_version": "0.28.1-major",
+              "code_hash": "b606a4af3b7e4fe2c428be687ba70c7e7f988e0a9950ec545a9d13b495921d3e",
+              "app_verity_root": "6e8d46a083ca91406227fcd0f067aa521c139823d409aaaae1903c807d221ef7",
+              "launch_digest": "40c06c814a23076369f4abc39f45bbede0752c3d14ca224177d12d0b15e0963f",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=03886f2cdd4a4af0b12f4b41a23fe0106422f960d0be4fd20345a5fd384f86c4",
+                "cmdline_contains": "teechat.app_verity_root=6e8d46a083ca91406227fcd0f067aa521c139823d409aaaae1903c807d221ef7",
                 "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
                 "vcpus": 8,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "8ed47b05d7acbdbae031c9264ba9e1a2bf6438e653ac63cd16453ba16f0fe80c2abc5194cacb2734e0c4498230b7fa9b"
+                "launch_digest_raw": "93d76e86431f37bcb20b2da07db22d54c9c6e1fae84f7cf2cc819acdd7195746931a36582ed08af5e03719e09db28b70"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
             {
-              "golden_version": "gateway-app-0.28.0",
+              "golden_version": "gateway-app-0.28.1",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
-              "app_build_version": "0.28.0",
-              "code_hash": "906218a3487574cd5cfdfd67857328b781f3c0d49c2c5b7addef1717cbab0365",
-              "app_verity_root": "08a3958a57e2a3edf4116526855c5f6e7b93649cb91b47cd40fa2a92097285e7",
-              "launch_digest": "9d284f7e935e7a7d57300ba38984a2fcf535d49b8ad9006cba7b7ebc7150e82e",
+              "app_build_version": "0.28.1",
+              "code_hash": "b606a4af3b7e4fe2c428be687ba70c7e7f988e0a9950ec545a9d13b495921d3e",
+              "app_verity_root": "9bd83394dea3b6e12cdc341bd97f9e32f80f022f36de4b857bc59a396bce1941",
+              "launch_digest": "91c35ffd7f15be08cf418b3804dd30800abb17928a04c962ca265f176e2b6528",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=08a3958a57e2a3edf4116526855c5f6e7b93649cb91b47cd40fa2a92097285e7",
+                "cmdline_contains": "teechat.app_verity_root=9bd83394dea3b6e12cdc341bd97f9e32f80f022f36de4b857bc59a396bce1941",
                 "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
                 "vcpus": 2,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "ebd32ed921ff25a815049a450020be934b2f16f914ce34603a3544710482b237c5547243f8a932a22f6dd687e500e036"
+                "launch_digest_raw": "d28e2d9c66a4234994bd07e3dcaa83a1760b271866e6c65c4a65ebb041a4afc9ed453b9fd69b40516e01301078f8856a"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
