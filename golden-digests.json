@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-09-21T09:37:20Z",
-  "epoch": 125,
+  "published_at": "2026-10-11T11:52:53Z",
+  "epoch": 130,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -493,6 +493,44 @@
       "backends": {
         "sev-snp-cvm": {
           "active": [
+            {
+              "golden_version": "gateway-app-0.29.0-major",
+              "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
+              "app_build_version": "0.29.0-major",
+              "code_hash": "daf0ebba2796028953fe57caa9912df28f48129a50429fa43a77e68ab233b715",
+              "app_verity_root": "55bc1e0d41cdc49c9c7211b6952d0cb41b3c5edb4fde0503e5bb40d58ed55622",
+              "launch_digest": "d1830d2eff5c73f65ac03cb9393ab4d33b0c370f32e64c8a4f7e255efbc54b2b",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=55bc1e0d41cdc49c9c7211b6952d0cb41b3c5edb4fde0503e5bb40d58ed55622",
+                "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
+                "vcpus": 8,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "550590e307246ef1cdf6c6030b6f0049ddc1efa5f1249f8fae82d48f3f80b0b0383de63c39ab26f7f307a52fcc490659"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
+            {
+              "golden_version": "gateway-app-0.29.0",
+              "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
+              "app_build_version": "0.29.0",
+              "code_hash": "daf0ebba2796028953fe57caa9912df28f48129a50429fa43a77e68ab233b715",
+              "app_verity_root": "880c7de8e0f27b2a275fc590129efaa7feb357d6d5bc3f7a4224e89e2b5207f1",
+              "launch_digest": "f14a9451f042726ae2de7859403e8e5235146a7dd22770a4a26b75405b6bba32",
+              "tls_key_policy": "seal_sync",
+              "vehicle": "talos",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.app_verity_root=880c7de8e0f27b2a275fc590129efaa7feb357d6d5bc3f7a4224e89e2b5207f1",
+                "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
+                "vcpus": 2,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "28d2b093b2fd78b530aa1aec37b13db9f519fcab7539eab5407f8614e57a77ee8c95fd2f56dd17f6b2d41011b09c23cc"
+              },
+              "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
+            },
             {
               "golden_version": "gateway-app-0.28.2-major",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
@@ -2833,6 +2871,25 @@
                 "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=74adfeb092cba3e1ec1035a56543b728926e586378e88ed5f1cc217ad0ea6c5e init_on_alloc=1 init_on_free=1 debugfs=off"
               },
               "notes": "Isolated Wave 3 remasure for a new app-verity root. Did not write OS golden cmdline, root-verity.json, or live 0.15.6 attach. Do not Wave B --force-live until explicit GO."
+            },
+            {
+              "golden_version": "engine-app-0.17.0-vllm029-luks0828",
+              "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+              "app_build_version": "0.17.0-vllm029-luks0828",
+              "code_hash": "ddd15f9dd022ace522c79ec517c334e5423dfbc648872de84787d671b0404af9",
+              "app_verity_root": "601aa61a4543a6db3d68995738d35bc4a8b09181b8e028402f93beccf999e18a",
+              "launch_digest": "1eb76bd4ef476e8b86daf5047ca43489289c4a8ee4037ba2b16895f1874a14fe",
+              "measure_inputs": {
+                "cmdline_contains": "teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49",
+                "os_golden_version": "engine-ubuntu-6.8.0-124-wave2-ni-v2",
+                "cmdline_also_contains": "teechat.app_verity_root=601aa61a4543a6db3d68995738d35bc4a8b09181b8e028402f93beccf999e18a",
+                "vcpus": 43,
+                "vcpu_type": "EPYC-v4",
+                "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
+                "launch_digest_raw": "eff22723fb4218e1612bc3387813d138c1402ff3cc6a263281e4e363713fb63cfe0ba2b9016b1e4f042cfedbca4a3c83",
+                "full_cmdline": "root=/dev/mapper/teechat-engine-root ro fsck.mode=skip console=tty1 console=ttyS0 teechat.root_verity_root=84622dc3f0ef9bba2153e1d5219011575c8a6938696878494243bcdb93b1ac49 teechat.app_verity_root=601aa61a4543a6db3d68995738d35bc4a8b09181b8e028402f93beccf999e18a init_on_alloc=1 init_on_free=1 debugfs=off"
+              },
+              "notes": "Live QEMU remasure 2026-10-06 after rotator-stuck guest cycle. OVMF /usr/share/ovmf/OVMF.amdsev.fd + virsh cmdline; composed LD 1eb76bd4\u2026 (supersedes liveboot 8005f633\u2026 which no longer matches the running guest)."
             }
           ]
         }
