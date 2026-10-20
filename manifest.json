@@ -1,8 +1,8 @@
 {
   "schema": "teechat-golden-digests-manifest/v1",
   "key_id": "golden-digests-v1",
-  "published_at": "2026-10-20T13:30:00Z",
-  "epoch": 133,
+  "published_at": "2026-10-20T13:37:11Z",
+  "epoch": 134,
   "not_after": "2027-07-29T02:35:30Z",
   "retired_grace_period_days": 30,
   "manifest_url": "https://github.com/Lightec-AI/teechat-golden-digests/releases/latest/download/golden-digests.json",
@@ -497,18 +497,18 @@
               "golden_version": "gateway-app-0.29.2-major",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
               "app_build_version": "0.29.2-major",
-              "code_hash": "b86e486ddcf39e387b82e695c420da4e27a68f4f90e7a19c57445ea8615be381",
-              "app_verity_root": "0a656a809ced14bb87f2ee8b2560eeafe8848e7ceb9b535e52bdf55f3665f1fb",
-              "launch_digest": "fb6990ef459522c50b80119e191b244ad07a467bb85c6ca73f3c7cb41f8d9ba9",
+              "code_hash": "b0e8f5b73eeea7151c9f05fa81313caf822252bf4b9d0418521e100371b33474",
+              "app_verity_root": "cd3a46af2ae3b5c54a7ebd9be0db91c9ade8a0d608a5e275a3ca959ec0b37545",
+              "launch_digest": "193e4d261763f998e85662cc88102d4e606b08a3960d3b7efd890a4e7fd6797c",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=0a656a809ced14bb87f2ee8b2560eeafe8848e7ceb9b535e52bdf55f3665f1fb",
+                "cmdline_contains": "teechat.app_verity_root=cd3a46af2ae3b5c54a7ebd9be0db91c9ade8a0d608a5e275a3ca959ec0b37545",
                 "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync-major",
                 "vcpus": 8,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "6d6dfd31b821fe098c729e42c287fd2c5b69ff26a7bf8e776dc369d572dd9eb1775eb951b39c4bfc0d5f30b8f212051b"
+                "launch_digest_raw": "e6a14e653d343b3d55ec7999fd45a119431f831d03675b104370c88d8ad226fe0adc3e0b374c6fe15e4f7ca50cd9af65"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
@@ -516,18 +516,18 @@
               "golden_version": "gateway-app-0.29.2",
               "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
               "app_build_version": "0.29.2",
-              "code_hash": "b86e486ddcf39e387b82e695c420da4e27a68f4f90e7a19c57445ea8615be381",
-              "app_verity_root": "61c4a8e7d685e35ffa6d26178a377ad9d3de1a5c7e528c7561f18fd0e31c74e8",
-              "launch_digest": "2281e2f0d4861ba7adadd3d83ec227737b40b0bcf812eb2f27aedbf1a3b38e9c",
+              "code_hash": "b0e8f5b73eeea7151c9f05fa81313caf822252bf4b9d0418521e100371b33474",
+              "app_verity_root": "564d1f48b5076b70968e2705d280859e354c6d31e941e869e9bbbfdb3267f285",
+              "launch_digest": "91e6ea422bda40c45141e8a5ad59de01ec526fa901ec04e705bdf77ffc66ea8b",
               "tls_key_policy": "seal_sync",
               "vehicle": "talos",
               "measure_inputs": {
-                "cmdline_contains": "teechat.app_verity_root=61c4a8e7d685e35ffa6d26178a377ad9d3de1a5c7e528c7561f18fd0e31c74e8",
+                "cmdline_contains": "teechat.app_verity_root=564d1f48b5076b70968e2705d280859e354c6d31e941e869e9bbbfdb3267f285",
                 "os_golden_version": "gateway-golden-20260803-d46d22c7d871-seal-sync",
                 "vcpus": 2,
                 "vcpu_type": "EPYC-v4",
                 "launch_digest_encoding": "sha256(ascii_hex(raw_measure))",
-                "launch_digest_raw": "cb7a84e5011ef5f6ebcc22bc1b6fe67b6292f7aa743f37a5f9364d8268aaffbe519f96abd471806a85aa83526744b936"
+                "launch_digest_raw": "632eadfbfa91eb9a90c23e2e4707b94ef80c568ac12d5708e4956d04289ed82a9a800e563755ca231bc09af3b8b36944"
               },
               "notes": "Composed LD for hybrid gateway app volume. Promote before VIP cutover; staging must seal-sync after MEASUREMENT change."
             },
